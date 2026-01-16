@@ -1,0 +1,247 @@
+/* ================================
+   CUSTOM STYLES
+   Portfolio Website
+================================ */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+    background-color: #E63946;
+    color: #F5F0E8;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to elements */
+.project-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* ================================
+   VIDEO SECTION
+================================ */
+
+#video-container {
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Play button pulse effect */
+#play-btn {
+    position: relative;
+}
+
+#play-btn::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2px solid rgba(245, 240, 232, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+/* ================================
+   MODAL STYLES
+================================ */
+
+#project-modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#project-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#project-modal.active #modal-backdrop {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+#project-modal.active .max-w-5xl {
+    animation: slideUp 0.5s ease forwards;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ================================
+   HOVER EFFECTS
+================================ */
+
+/* Project card image overlay on hover */
+.project-card .aspect-square {
+    position: relative;
+}
+
+.project-card .aspect-square::after {
+    content: 'View Project';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(26, 26, 26, 0.7);
+    color: #F5F0E8;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1rem;
+}
+
+.project-card:hover .aspect-square::after {
+    opacity: 1;
+}
+
+/* ================================
+   RESPONSIVE ADJUSTMENTS
+================================ */
+
+@media (max-width: 768px) {
+    /* Smaller play button on mobile */
+    #play-btn {
+        width: 72px;
+        height: 72px;
+    }
+    
+    #play-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Adjust project card spacing */
+    .project-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ================================
+   SCROLLBAR STYLING
+================================ */
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F0E8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6B6B6B;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1A1A1A;
+}
+
+/* ================================
+   UTILITY CLASSES
+================================ */
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Text gradient effect (optional) */
+.text-gradient {
+    background: linear-gradient(135deg, #1A1A1A, #E63946);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ================================
+   PLACEHOLDER STYLES
+   (For development - remove when real images added)
+================================ */
+
+/* Placeholder image style */
+.placeholder-img {
+    background: linear-gradient(135deg, #2A2A2A 0%, #3A3A3A 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B6B6B;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.25rem;
+}
+
