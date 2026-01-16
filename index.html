@@ -39,27 +39,28 @@
 <body class="bg-cream text-charcoal font-body relative overflow-x-hidden">
     
     <!-- Background Patch - Spans from video area to middle of images -->
-    <div class="absolute left-0 right-0 top-[25vh] h-[140vh] bg-[#895129] pointer-events-none"></div>
+    <div class="absolute left-0 right-0 top-[20vh] sm:top-[25vh] h-[160vh] sm:h-[140vh] bg-[#895129] pointer-events-none"></div>
     
     <!-- Hero Section - Full Viewport -->
-    <section class="h-screen flex flex-col max-w-7xl mx-auto px-12 md:px-20 lg:px-32 py-4 relative">
+    <section class="h-screen flex flex-col max-w-7xl mx-auto px-5 sm:px-8 md:px-20 lg:px-32 py-3 sm:py-4 relative">
         
         <!-- Header -->
-        <header class="flex justify-between items-center py-6 mb-4">
+        <header class="flex flex-col sm:flex-row justify-between items-center sm:items-center gap-3 sm:gap-0 py-4 sm:py-6 mb-2 sm:mb-4">
             <!-- Logo/Name -->
-            <a href="index.html" class="hover:text-accent transition-colors">
-                <span class="font-display font-bold text-2xl tracking-tight block">MAHA WAQAR</span>
-                <span class="text-muted text-sm">&nbsp;&nbsp;&nbsp;Brand Identity Designer</span>
+            <a href="index.html" class="hover:text-accent transition-colors text-center sm:text-left">
+                <span class="font-display font-bold text-xl sm:text-2xl tracking-tight block">MAHA WAQAR</span>
+                <span class="text-muted text-sm lg:text-lg">Brand Identity Designer</span>
             </a>
             
             <!-- Contact Button -->
-            <a href="#contact" class="px-6 py-3 bg-[#895129] text-cream font-medium text-sm rounded-full hover:bg-charcoal transition-colors duration-300">
-                C O N T A C T &nbsp;&nbsp; M A H A
+            <a href="#contact" class="px-4 sm:px-6 py-2 sm:py-3 bg-[#895129] text-cream font-medium text-xs sm:text-sm rounded-full hover:bg-charcoal transition-colors duration-300">
+                <span class="hidden sm:inline">C O N T A C T &nbsp;&nbsp; M A H A</span>
+                <span class="sm:hidden">C O N T A C T</span>
             </a>
         </header>
 
         <!-- Video Container - Takes remaining space -->
-        <div class="relative flex-1 min-h-0 bg-charcoal rounded-2xl overflow-hidden cursor-pointer group" id="video-container">
+        <div class="relative flex-1 min-h-0 bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer group" id="video-container">
                 <!-- Video Thumbnail -->
                 <img 
                     src="assets/images/video-thumbnail.svg" 
@@ -70,8 +71,8 @@
                 
                 <!-- Play Button Overlay -->
                 <div class="absolute inset-0 flex items-center justify-center bg-charcoal/30 transition-all duration-300 group-hover:bg-charcoal/40" id="play-overlay">
-                    <button class="w-20 h-20 bg-cream rounded-full flex items-center justify-center shadow-2xl transform transition-transform duration-300 group-hover:scale-110" id="play-btn">
-                        <svg class="w-7 h-7 text-charcoal ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <button class="w-14 h-14 sm:w-20 sm:h-20 bg-cream rounded-full flex items-center justify-center shadow-2xl transform transition-transform duration-300 group-hover:scale-110" id="play-btn">
+                        <svg class="w-5 h-5 sm:w-7 sm:h-7 text-charcoal ml-1" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </button>
@@ -92,61 +93,61 @@
     <!-- Main Content -->
     <main>
         <!-- Projects Section -->
-        <section class="max-w-7xl mx-auto px-12 md:px-20 lg:px-32 py-16">
+        <section class="max-w-7xl mx-auto px-5 sm:px-8 md:px-20 lg:px-32 py-10 sm:py-16">
             <!-- Section Label -->
-            <h2 class="font-display  text-3xl md:text-4xl text-center mb-12 uppercase tracking-wide text-cream relative z-10">C A S E &nbsp; S T U D I E S</h2>
+            <h2 class="font-display text-xl sm:text-3xl md:text-4xl text-center mb-8 sm:mb-12 uppercase tracking-wide text-cream relative z-10">C A S E &nbsp; S T U D I E S</h2>
             
             <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                 
                 <!-- Project 1 -->
                 <article class="project-card group cursor-pointer" data-project="1">
-                    <div class="aspect-square bg-charcoal rounded-2xl overflow-hidden mb-5">
+                    <div class="aspect-square bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-5">
                         <img 
                             src="assets/images/project-1.svg" 
                             alt="Project 1" 
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
                     </div>
-                    <h3 class="font-display font-semibold text-xl group-hover:text-accent transition-colors">Luminex Studios</h3>
-                    <p class="text-muted mt-1">Brand Identity & Logo Design</p>
+                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Luminex Studios</h3>
+                    <p class="text-muted text-sm sm:text-base mt-1">Brand Identity & Logo Design</p>
                 </article>
 
                 <!-- Project 2 -->
                 <article class="project-card group cursor-pointer" data-project="2">
-                    <div class="aspect-square bg-charcoal rounded-2xl overflow-hidden mb-5">
+                    <div class="aspect-square bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-5">
                         <img 
                             src="assets/images/project-2.svg" 
                             alt="Project 2" 
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
                     </div>
-                    <h3 class="font-display font-semibold text-xl group-hover:text-accent transition-colors">Apex Ventures</h3>
-                    <p class="text-muted mt-1">Logo Design & Visual System</p>
+                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Apex Ventures</h3>
+                    <p class="text-muted text-sm sm:text-base mt-1">Logo Design & Visual System</p>
                 </article>
 
                 <!-- Project 3 -->
                 <article class="project-card group cursor-pointer" data-project="3">
-                    <div class="aspect-square bg-charcoal rounded-2xl overflow-hidden mb-5">
+                    <div class="aspect-square bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-5">
                         <img 
                             src="assets/images/project-3.svg" 
                             alt="Project 3" 
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
                     </div>
-                    <h3 class="font-display font-semibold text-xl group-hover:text-accent transition-colors">Terra Coffee</h3>
-                    <p class="text-muted mt-1">Brand Identity & Packaging</p>
+                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Terra Coffee</h3>
+                    <p class="text-muted text-sm sm:text-base mt-1">Brand Identity & Packaging</p>
                 </article>
 
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="bg-charcoal text-cream py-24">
-            <div class="max-w-7xl mx-auto px-12 md:px-20 lg:px-32 text-center">
-                <span class="text-cream/60 text-sm font-medium uppercase tracking-widest">Let's Collaborate</span>
-                <h2 class="font-display font-bold text-5xl md:text-6xl mt-4 mb-8">Have a project in mind?</h2>
-                <a href="mailto:hello@yourname.com" class="inline-block px-10 py-4 bg-cream text-charcoal font-semibold rounded-full hover:bg-accent hover:text-cream transition-colors duration-300">
+        <section id="contact" class="bg-charcoal text-cream py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-20 lg:px-32 text-center">
+                <span class="text-cream/60 text-xs sm:text-sm font-medium uppercase tracking-widest">Let's Collaborate</span>
+                <h2 class="font-display font-bold text-3xl sm:text-5xl md:text-6xl mt-3 sm:mt-4 mb-6 sm:mb-8">Have a project in mind?</h2>
+                <a href="mailto:hello@mahawaqar.com" class="inline-block px-6 sm:px-10 py-3 sm:py-4 bg-cream text-charcoal font-semibold text-sm sm:text-base rounded-full hover:bg-accent hover:text-cream transition-colors duration-300">
                     Start a Conversation
                 </a>
             </div>
@@ -155,10 +156,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-charcoal text-cream/60 py-8">
-        <div class="max-w-7xl mx-auto px-12 md:px-20 lg:px-32 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-sm">© 2026 Maha Waqar. All rights reserved.</p>
-            <div class="flex gap-6">
+    <footer class="bg-charcoal text-cream/60 py-6 sm:py-8">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-20 lg:px-32 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs sm:text-sm">© 2026 Maha Waqar. All rights reserved.</p>
+            <div class="flex gap-4 sm:gap-6 text-xs sm:text-sm">
                 <a href="#" class="hover:text-cream transition-colors">Instagram</a>
                 <a href="#" class="hover:text-cream transition-colors">Behance</a>
                 <a href="#" class="hover:text-cream transition-colors">Dribbble</a>
@@ -174,34 +175,34 @@
         <!-- Modal Content -->
         <div class="relative h-full overflow-y-auto">
             <!-- Close Button -->
-            <button class="fixed top-6 right-6 w-12 h-12 bg-cream text-charcoal rounded-full flex items-center justify-center hover:bg-accent hover:text-cream transition-colors z-10" id="modal-close">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button class="fixed top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-cream text-charcoal rounded-full flex items-center justify-center hover:bg-accent hover:text-cream transition-colors z-10" id="modal-close">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
             </button>
             
             <!-- Modal Body -->
-            <div class="max-w-5xl mx-auto px-12 md:px-20 lg:px-32 py-24">
+            <div class="max-w-5xl mx-auto px-5 sm:px-8 md:px-20 lg:px-32 py-16 sm:py-24">
                 <!-- Project Image -->
-                <div class="aspect-square md:aspect-video bg-charcoal rounded-2xl overflow-hidden mb-12">
+                <div class="aspect-square md:aspect-video bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-8 sm:mb-12">
                     <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
                 </div>
                 
                 <!-- Project Info -->
                 <div class="text-cream">
-                    <span class="text-cream/60 text-sm font-medium uppercase tracking-widest" id="modal-category">Category</span>
-                    <h1 class="font-display font-bold text-4xl md:text-5xl mt-3 mb-6" id="modal-title">Project Title</h1>
+                    <span class="text-cream/60 text-xs sm:text-sm font-medium uppercase tracking-widest" id="modal-category">Category</span>
+                    <h1 class="font-display font-bold text-2xl sm:text-4xl md:text-5xl mt-2 sm:mt-3 mb-4 sm:mb-6" id="modal-title">Project Title</h1>
                     
-                    <div class="grid md:grid-cols-3 gap-12">
+                    <div class="grid md:grid-cols-3 gap-8 sm:gap-12">
                         <div class="md:col-span-2">
-                            <h3 class="font-display font-semibold text-xl mb-4">About the Project</h3>
-                            <p class="text-cream/80 leading-relaxed" id="modal-description">
+                            <h3 class="font-display font-semibold text-lg sm:text-xl mb-3 sm:mb-4">About the Project</h3>
+                            <p class="text-cream/80 text-sm sm:text-base leading-relaxed" id="modal-description">
                                 Project description goes here...
                             </p>
                         </div>
                         <div>
-                            <h3 class="font-display font-semibold text-xl mb-4">Details</h3>
-                            <ul class="space-y-3 text-cream/80">
+                            <h3 class="font-display font-semibold text-lg sm:text-xl mb-3 sm:mb-4">Details</h3>
+                            <ul class="space-y-2 sm:space-y-3 text-cream/80 text-sm sm:text-base">
                                 <li><span class="text-cream/60">Client:</span> <span id="modal-client">Client Name</span></li>
                                 <li><span class="text-cream/60">Year:</span> <span id="modal-year">2026</span></li>
                                 <li><span class="text-cream/60">Services:</span> <span id="modal-services">Logo Design</span></li>
