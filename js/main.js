@@ -26,7 +26,7 @@ const projects = {
         title: "Brainwise",
         category: "Logo Design & Visual System",
         gallery: [
-            "assets/images/brain/brain1.jpg",
+            "https://res.cloudinary.com/djoxx3fl8/image/upload/v1783593596/Logo-Design-Portfolio/Brain/brain1_kisudg.jpg",
             "assets/images/brain/brain2.jpg",
             "assets/images/brain/brain3.jpg",
             "assets/images/brain/brain4.jpg",
