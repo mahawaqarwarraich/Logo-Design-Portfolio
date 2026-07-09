@@ -8,29 +8,47 @@
 // ================================
 const projects = {
     1: {
-        title: "Luminex Studios",
+        title: "Vyra",
         category: "Brand Identity & Logo Design",
-        image: "assets/images/project-1.svg",
-        description: "Luminex Studios is a creative agency specializing in video production and visual storytelling. The brand identity was designed to reflect their innovative approach and premium quality services. The logo features a dynamic light beam motif that symbolizes creativity and illumination.",
-        client: "Luminex Studios",
+        gallery: [
+            "assets/images/Vira/vyra1.jpg",
+            "assets/images/Vira/vyra2.png",
+            "assets/images/Vira/vyra3.jpg",
+            "assets/images/Vira/vyra4.jpg",
+            "assets/images/Vira/vyra5.jpg"
+        ],
+        description: "Vyra is a contemporary jewelry brand rooted in minimalist luxury. The brand identity pairs a refined geometric wordmark with a delicate gold triangle motif, reflecting precision, elegance, and modern femininity across packaging and product presentation.",
+        client: "Vyra Jewelry",
         year: "2026",
-        services: "Logo Design, Brand Identity, Guidelines"
+        services: "Logo Design, Brand Identity, Packaging"
     },
     2: {
-        title: "Apex Ventures",
+        title: "Brainwise",
         category: "Logo Design & Visual System",
-        image: "assets/images/project-2.svg",
-        description: "Apex Ventures is a venture capital firm focused on technology startups. The brand needed to convey trust, growth, and forward-thinking. The geometric logomark represents upward momentum and reaching new heights, while the clean typography ensures professionalism.",
-        client: "Apex Ventures",
+        gallery: [
+            "assets/images/brain/brain1.jpg",
+            "assets/images/brain/brain2.jpg",
+            "assets/images/brain/brain3.jpg",
+            "assets/images/brain/brain4.jpg",
+            "assets/images/brain/brain5.jpg"
+        ],
+        description: "Brainwise is a data intelligence consultancy helping businesses make smarter decisions. The logo combines a brain motif with an upward trend line, symbolizing insight and growth. The identity extends across signage and environmental branding with a bold yellow-on-black palette.",
+        client: "Brainwise",
         year: "2025",
-        services: "Logo Design, Visual Identity, Stationery"
+        services: "Logo Design, Visual Identity, Signage"
     },
     3: {
-        title: "Terra Coffee",
+        title: "Nova",
         category: "Brand Identity & Packaging",
-        image: "assets/images/project-3.svg",
-        description: "Terra Coffee is a sustainable coffee brand sourcing beans from small farms around the world. The earthy, organic aesthetic reflects their commitment to nature and ethical sourcing. The logo combines a coffee bean with landscape elements to tell their origin story.",
-        client: "Terra Coffee Co.",
+        gallery: [
+            "assets/images/novas/nova1.jpg",
+            "assets/images/novas/nova2.png",
+            "assets/images/novas/nova3.jpg",
+            "assets/images/novas/nova4.jpg",
+            "assets/images/novas/nova5.jpg"
+        ],
+        description: "Nova is a forward-thinking brand built around energy, innovation, and bold visual impact. The identity system was crafted to feel modern and memorable across packaging, digital touchpoints, and brand collateral.",
+        client: "Nova",
         year: "2025",
         services: "Logo Design, Packaging, Brand Guidelines"
     }
@@ -49,6 +67,8 @@ const projectModal = document.getElementById('project-modal');
 const modalBackdrop = document.getElementById('modal-backdrop');
 const modalClose = document.getElementById('modal-close');
 const modalImage = document.getElementById('modal-image');
+const modalSingle = document.getElementById('modal-single');
+const modalGallery = document.getElementById('modal-gallery');
 const modalTitle = document.getElementById('modal-title');
 const modalCategory = document.getElementById('modal-category');
 const modalDescription = document.getElementById('modal-description');
@@ -103,15 +123,28 @@ function openModal(projectId) {
     
     if (!project) return;
     
-    // Populate modal with project data
-    modalImage.src = project.image;
-    modalImage.alt = project.title;
-    modalTitle.textContent = project.title;
-    modalCategory.textContent = project.category;
-    modalDescription.textContent = project.description;
-    modalClient.textContent = project.client;
-    modalYear.textContent = project.year;
-    modalServices.textContent = project.services;
+    if (project.gallery) {
+        modalSingle.classList.add('hidden');
+        modalGallery.classList.remove('hidden');
+        modalGallery.innerHTML = project.gallery.map((src, index) => `
+            <div class="bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden">
+                <img src="${src}" alt="${project.title} ${index + 1}" class="w-full h-auto block">
+            </div>
+        `).join('');
+    } else {
+        modalSingle.classList.remove('hidden');
+        modalGallery.classList.add('hidden');
+        modalGallery.innerHTML = '';
+
+        modalImage.src = project.image;
+        modalImage.alt = project.title;
+        modalTitle.textContent = project.title;
+        modalCategory.textContent = project.category;
+        modalDescription.textContent = project.description;
+        modalClient.textContent = project.client;
+        modalYear.textContent = project.year;
+        modalServices.textContent = project.services;
+    }
     
     // Show modal
     projectModal.classList.remove('hidden');
@@ -128,6 +161,9 @@ function closeModal() {
     
     setTimeout(() => {
         projectModal.classList.add('hidden');
+        modalGallery.innerHTML = '';
+        modalSingle.classList.remove('hidden');
+        modalGallery.classList.add('hidden');
     }, 300);
     
     // Restore body scroll

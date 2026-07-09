@@ -123,13 +123,20 @@ html {
     animation: fadeIn 0.3s ease forwards;
 }
 
-#project-modal.active .max-w-5xl {
+#project-modal.active .modal-body {
     animation: slideUp 0.5s ease forwards;
 }
 
 /* Prevent body scroll when modal is open */
 body.modal-open {
     overflow: hidden;
+}
+
+.modal-body img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ================================
@@ -139,6 +146,12 @@ body.modal-open {
 /* Project card image overlay on hover */
 .project-card .aspect-square {
     position: relative;
+}
+
+/* Vyra — anchor right edge so logo is never cropped; trim from the left */
+.project-card-vyra img {
+    object-fit: cover;
+    object-position: right center;
 }
 
 .project-card .aspect-square::after {

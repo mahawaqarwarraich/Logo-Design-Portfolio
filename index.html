@@ -63,8 +63,8 @@
         <div class="relative flex-1 min-h-0 bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer group" id="video-container">
                 <!-- Video Thumbnail -->
                 <img 
-                    src="assets/images/video-thumbnail.svg" 
-                    alt="Showreel Thumbnail" 
+                    src="assets/images/coffee%20vid-Cover.jpg" 
+                    alt="Coffee video cover" 
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     id="video-thumbnail"
                 >
@@ -84,7 +84,7 @@
                     id="main-video"
                     controls
                 >
-                    <source src="assets/videos/showreel.mp4" type="video/mp4">
+                    <source src="assets/videos/coffee%20vid.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
         </div>
@@ -101,15 +101,15 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                 
                 <!-- Project 1 -->
-                <article class="project-card group cursor-pointer" data-project="1">
+                <article class="project-card project-card-vyra group cursor-pointer" data-project="1">
                     <div class="aspect-square bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-5">
                         <img 
-                            src="assets/images/project-1.svg" 
-                            alt="Project 1" 
+                            src="assets/images/vyra.png" 
+                            alt="Vyra Jewelry" 
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
                     </div>
-                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Luminex Studios</h3>
+                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Vyra</h3>
                     <p class="text-muted text-sm sm:text-base mt-1">Brand Identity & Logo Design</p>
                 </article>
 
@@ -117,12 +117,12 @@
                 <article class="project-card group cursor-pointer" data-project="2">
                     <div class="aspect-square bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-5">
                         <img 
-                            src="assets/images/project-2.svg" 
-                            alt="Project 2" 
+                            src="assets/images/brainwise.png" 
+                            alt="Brainwise" 
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
                     </div>
-                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Apex Ventures</h3>
+                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Brainwise</h3>
                     <p class="text-muted text-sm sm:text-base mt-1">Logo Design & Visual System</p>
                 </article>
 
@@ -130,12 +130,12 @@
                 <article class="project-card group cursor-pointer" data-project="3">
                     <div class="aspect-square bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-5">
                         <img 
-                            src="assets/images/project-3.svg" 
-                            alt="Project 3" 
+                            src="assets/images/nova.png" 
+                            alt="Nova" 
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
                     </div>
-                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Terra Coffee</h3>
+                    <h3 class="font-display font-semibold text-lg sm:text-xl group-hover:text-accent transition-colors">Nova</h3>
                     <p class="text-muted text-sm sm:text-base mt-1">Brand Identity & Packaging</p>
                 </article>
 
@@ -160,8 +160,8 @@
         <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-20 lg:px-32 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-xs sm:text-sm">© 2026 Maha Waqar. All rights reserved.</p>
             <div class="flex gap-4 sm:gap-6 text-xs sm:text-sm">
-                <a href="#" class="hover:text-cream transition-colors">Instagram</a>
-                <a href="#" class="hover:text-cream transition-colors">Behance</a>
+                <a href="https://www.instagram.com/mw.desigs/" target="_blank" rel="noopener noreferrer" class="hover:text-cream transition-colors">Instagram</a>
+                <a href="https://www.behance.net/mahawaqar" target="_blank" rel="noopener noreferrer" class="hover:text-cream transition-colors">Behance</a>
                 <a href="#" class="hover:text-cream transition-colors">Dribbble</a>
             </div>
         </div>
@@ -182,34 +182,38 @@
             </button>
             
             <!-- Modal Body -->
-            <div class="max-w-5xl mx-auto px-5 sm:px-8 md:px-20 lg:px-32 py-16 sm:py-24">
-                <!-- Project Image -->
-                <div class="aspect-square md:aspect-video bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-8 sm:mb-12">
-                    <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
-                </div>
-                
-                <!-- Project Info -->
-                <div class="text-cream">
-                    <span class="text-cream/60 text-xs sm:text-sm font-medium uppercase tracking-widest" id="modal-category">Category</span>
-                    <h1 class="font-display font-bold text-2xl sm:text-4xl md:text-5xl mt-2 sm:mt-3 mb-4 sm:mb-6" id="modal-title">Project Title</h1>
+            <div class="modal-body w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-24">
+                <!-- Single project view -->
+                <div id="modal-single">
+                    <div class="bg-charcoal rounded-xl sm:rounded-2xl overflow-hidden mb-8 sm:mb-12">
+                        <img id="modal-image" src="" alt="" class="w-full h-auto block">
+                    </div>
                     
-                    <div class="grid md:grid-cols-3 gap-8 sm:gap-12">
-                        <div class="md:col-span-2">
-                            <h3 class="font-display font-semibold text-lg sm:text-xl mb-3 sm:mb-4">About the Project</h3>
-                            <p class="text-cream/80 text-sm sm:text-base leading-relaxed" id="modal-description">
-                                Project description goes here...
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-semibold text-lg sm:text-xl mb-3 sm:mb-4">Details</h3>
-                            <ul class="space-y-2 sm:space-y-3 text-cream/80 text-sm sm:text-base">
-                                <li><span class="text-cream/60">Client:</span> <span id="modal-client">Client Name</span></li>
-                                <li><span class="text-cream/60">Year:</span> <span id="modal-year">2026</span></li>
-                                <li><span class="text-cream/60">Services:</span> <span id="modal-services">Logo Design</span></li>
-                            </ul>
+                    <div class="text-cream" id="modal-info">
+                        <span class="text-cream/60 text-xs sm:text-sm font-medium uppercase tracking-widest" id="modal-category">Category</span>
+                        <h1 class="font-display font-bold text-2xl sm:text-4xl md:text-5xl mt-2 sm:mt-3 mb-4 sm:mb-6" id="modal-title">Project Title</h1>
+                        
+                        <div class="grid md:grid-cols-3 gap-8 sm:gap-12">
+                            <div class="md:col-span-2">
+                                <h3 class="font-display font-semibold text-lg sm:text-xl mb-3 sm:mb-4">About the Project</h3>
+                                <p class="text-cream/80 text-sm sm:text-base leading-relaxed" id="modal-description">
+                                    Project description goes here...
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-semibold text-lg sm:text-xl mb-3 sm:mb-4">Details</h3>
+                                <ul class="space-y-2 sm:space-y-3 text-cream/80 text-sm sm:text-base">
+                                    <li><span class="text-cream/60">Client:</span> <span id="modal-client">Client Name</span></li>
+                                    <li><span class="text-cream/60">Year:</span> <span id="modal-year">2026</span></li>
+                                    <li><span class="text-cream/60">Services:</span> <span id="modal-services">Logo Design</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Gallery view -->
+                <div id="modal-gallery" class="hidden space-y-6 sm:space-y-8"></div>
             </div>
         </div>
     </div>
