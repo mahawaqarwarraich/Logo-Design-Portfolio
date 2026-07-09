@@ -26,11 +26,11 @@ const projects = {
         title: "Brainwise",
         category: "Logo Design & Visual System",
         gallery: [
-            "https://res.cloudinary.com/djoxx3fl8/image/upload/v1783593596/Logo-Design-Portfolio/Brain/brain1_kisudg.jpg",
-            "assets/images/brain/brain2.jpg",
-            "assets/images/brain/brain3.jpg",
-            "assets/images/brain/brain4.jpg",
-            "assets/images/brain/brain5.jpg"
+            "assets/images/Brain/brain1.jpg",
+            "assets/images/Brain/brain2.jpg",
+            "assets/images/Brain/brain3.jpg",
+            "assets/images/Brain/brain4.jpg",
+            "assets/images/Brain/brain5.jpg"
         ],
         description: "Brainwise is a data intelligence consultancy helping businesses make smarter decisions. The logo combines a brain motif with an upward trend line, symbolizing insight and growth. The identity extends across signage and environmental branding with a bold yellow-on-black palette.",
         client: "Brainwise",
